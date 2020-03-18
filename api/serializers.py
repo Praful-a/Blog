@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from account.models import Account
+from post.models import BlogPost
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
@@ -20,3 +21,13 @@ class UserProfileSerializer(serializers.ModelSerializer):
         user.save()
 
         return user
+
+
+class BlogPostSerializer(serializers.ModelSerializer):
+    """A Serializer for blog post item."""
+    class Meta:
+
+        model = BlogPost
+        fields = ('id', 'author', 'title', 'body', 'image', 'slug')
+        # fields = ['title', 'body', 'image', 'date_updated', 'username']
+        extra_kwargs = {'author': {'read_only': True}}
