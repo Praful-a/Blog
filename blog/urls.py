@@ -24,8 +24,9 @@ urlpatterns = [
     path('', include('personal.urls')),
     path('accounts/', include('account.urls')),
     path('', include('post.urls')),
+    path('api/', include('api.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    
+
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(
         template_name='registration/password_change_done.html'), name='password_change_done'),
 
