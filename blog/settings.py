@@ -143,8 +143,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'rock68232@gmail.com'
-EMAIL_HOST_PASSWORD = 'zakfjebywjokyqpt'
+EMAIL_HOST_USER = 'your email address'
+EMAIL_HOST_PASSWORD = 'your key'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'MyDreamWeb Team <noreply@mydreamweb.com>'
